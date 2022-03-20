@@ -42,7 +42,7 @@ requirements = python3,kivy==2.0.0,pillow,qrcode,kivymd,plyer
 # Sets custom source for any requirements with recipes
 # requirements.source.kivy = ../../kivy
 
- (list) Garden requirements
+# (list) Garden requirements
 garden_requirements = zbarcam
 
 # (str) Presplash of the application
