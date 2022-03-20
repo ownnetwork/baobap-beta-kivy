@@ -1,0 +1,8 @@
+<DialogAddingAccount>:
+    orientation: "vertical"
+    size_hint_y: None
+
+    MDTextField:
+        hint_text: "ip:port (port default 31131)"
+        multiline: False
+        on_text_validate: root.on_text_validate(self.text)

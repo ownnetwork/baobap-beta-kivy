@@ -1,0 +1,21 @@
+#:import QRCodeWidget kivy_garden.qrcode
+#:import Clipboard kivy.core.clipboard.Clipboard
+
+<ContectAccountInformation>:
+    orientation: "vertical"
+    size_hint_y: None
+    height: "400dp"
+    MDBoxLayout:
+        height: "280dp"
+        QRCodeWidget:
+            id: qr
+            data: root.qrcodedata
+    MDBoxLayout:
+        spacing: "4"
+        halign: "middle"
+        MDRaisedButton:
+            text: 'Copy QRCode'
+            on_release: Clipboard.copy(qr.data)
+        MDRaisedButton:
+            text: 'Decentralized Link'
+            on_release: root.DecentralizedLink(qr.data)

@@ -1,0 +1,19 @@
+#:import QRCodeWidget kivy_garden.qrcode
+
+<SwiperAvatarQrCode@MDSwiperItem>:
+
+    RelativeLayout:
+        FitImage:
+            #source: "baobapp/frame/img/mdcard/font.png"
+            radius: [21,]
+
+        MDLabel:
+            halign: "left"
+            valign: "middle"
+            text: root.surname
+
+        MDBoxLayout:
+            height: 50
+            width: 50
+            FitImage:
+                texture: root.qrcodedata

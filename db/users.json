@@ -1,0 +1,38 @@
+{
+  "ea41d344cc454415be9e2c3d3d57098d": {
+    "surname": "Surname",
+    "host": "127.0.0.1",
+    "port": 8081,
+    "public_key": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuJQmtFZl0Ze07U420/KN\nDIzy8T5ZsToxUOl7W8xYip/WwCG01+wxOGGnrbDLfx/kKyP6GifFXUAmbKJIAEAV\ni8H5Owz+U1W8UCISgxIbq122Un4Vp2rS4R6DAh98bO4Mmi+9ihULcTCjOt+Eo2WT\ncf2OIikDSDlZha4bFMcwGVuYf/VAUjZcAQKn4TUKZ3Pf1RSq1HpVXvSQgIkWVA8U\n87RE9IBnmcVS6h0WNZg+aegdKj+U02VO5zqZj8CwzGzdRc9y2X7SgLQSQasXyuna\n/gDWTs998fHmktfefVsXdAfntqU5wPWe22VOW5Q8EY3JA6BZRnmyKLb9rmuLQ/Yn\nRQIDAQAB\n-----END PUBLIC KEY-----",
+    "type_crypto": "RSA",
+    "sender_id": "ea41d344cc454415be9e2c3d3d57098d",
+    "chat_id": "6791c439a63211ec9fea9792a282c0cb"
+  },
+  "aa3c7f3a4f8849fc83b9418185a9e4e3": {
+    "surname": "None",
+    "host": "127.0.0.1",
+    "port": 8081,
+    "public_key": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuMR0OVqG5Xi5jmjdQhzD\nNUSVsYLImILs7bVVzMTWVi4lMJjS0Q1VM5RnA6lo5vbHQ9Y00c+SQr5hb6eoT5xh\n0MxAfUOWPOuQy5I60lVxjHE+qOJtWFUZ9d4DDbUXgRH345IQoVWQBd+V0VSJEmV+\nnVg3EQ1ro1euPQEyILIwrsWkBMLiCps0bIG5RZPSnw0qaquGGA28lD2c6CiWO8Aw\nWKxh3dQ532hwyDsk6RL4Mgi1++HWXHR8i4XOv4H63CKJSktJCp28GskbP68Haih2\nCz+IiCIG94UntV6Na/KRMXLhz6QWteOh1QaV3+8SqVWc5lNKUHui9U/nRjLsql21\nkwIDAQAB\n-----END PUBLIC KEY-----",
+    "type_crypto": "RSA",
+    "sender_id": "ea41d344cc454415be9e2c3d3d57098d",
+    "chat_id": "1548d4dda63311ec98fc9792a282c0cb"
+  },
+  "136d188a2a3f4cb1bdb3907deb28160e": {
+    "surname": "None",
+    "host": "127.0.0.1",
+    "port": 8080,
+    "public_key": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6yNj/Aq64a6QwTsN4ehL\nAzgQR5PApXy+H2JjzGkL+NybVqgrIByUb0lG0wYOCf1xSeaqqdlRjCB+H3OH+8vi\n0vjXuY5ssxAevI2OAw40VIJe0u8FIxet86Fs+VCcaD4lAt9wec9omz+GWVr5Haa5\nCDOnFvKHXd/C95/3E/WO0s0zbqOpXDmWJiTkZtUq4iJBZsCD5c53s5QbW1takssM\n3YTZkDusob4zGWOZP0MAWlA/I0z0SNocgbbNZ1KJfprxLwz6k+sp5RGW26jREy1m\n5ZKqtDhcoSDvyo+YGZJckcyLRsjp7zxxF+XqaUxSlMnBjAExNOTwykFaRUxUMCAd\nnQIDAQAB\n-----END PUBLIC KEY-----",
+    "type_crypto": "RSA",
+    "sender_id": "136d188a2a3f4cb1bdb3907deb28160e",
+    "chat_id": "2b9fbd26a63311ecac729792a282c0cb"
+  },
+  "07e2f4c0038b41f897c343b86dd5ede1": {
+    "surname": "None",
+    "host": "127.0.0.1",
+    "port": 8080,
+    "public_key": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0+iIgVtlOloAipSYes5H\nNyx6i97Dy/1OVimhBbE6AAbriyQ5OvnUu0I2bi0WiTpPKuTWDD1eXeYSPBiwwvAa\nQJFoRK58VE6NuNs0LOybYr1uS7hwyrA5T4ojB3yAVyh1XrNuGnaU7rv+SodMEx/U\nVwWdG6k7S5TIgbEWxEjCnJUHMjATCPN8leEUcALXXHQaJ3Fra1hFdEH457lceXUr\nw90UbNHzJkYntYndJuKsx4P2J53xQzBASKY5NNBiS2IvvkdyhmuFwuTOcHdkzqPj\nZ3MTZd13++DqKdW2a+vNRw12En9c1Qc85xkHZ+ZslCLbv9XPba/JJHJV3I7JGSds\n8wIDAQAB\n-----END PUBLIC KEY-----",
+    "type_crypto": "RSA",
+    "sender_id": "136d188a2a3f4cb1bdb3907deb28160e",
+    "chat_id": "30e9f4c0a63311ecac379792a282c0cb"
+  }
+}

@@ -1,0 +1,87 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+
+<SmoothLabel@MDLabel>:
+    size_hint: 1, None
+    text_size: self.width, None
+    height: self.texture_size[1]
+    halign: "left"
+    valign: "middle"
+    canvas.before:
+        Color:
+            rgb: .9, .9, .9
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+
+<SmoothLabelMy@MDLabel>:
+    size_hint: 1, None
+    text_size: self.width, None
+    height: self.texture_size[1]
+    halign: "right"
+    valign: "middle"
+    canvas.before:
+        Color:
+            rgb: .9, .9, .9
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+
+<AccountCard@MDCard>:
+    ripple_behavior: True
+    orientation: 'vertical'
+    size_hint: None, None
+    size: "285dp", "185dp"
+    elevation: 15
+    radius: 25
+    padding: "8dp"
+    MDLabel:
+        text: root.caption
+        theme_text_color: "Secondary"
+        adaptive_height: True
+    MDSeparator:
+        height: "1dp"
+    Image:
+        allow_stretch: True
+        keep_ratio: True
+        size: self.size
+        pos: self.pos
+        source: root.source
+
+<MyTile@SmartTileWithStar>:
+    size_hint_y: None
+    height: "240dp"
+
+<ChatScreen>:
+    name : 'chat'
+    md_bg_color: 48/255, 48/255, 48/255, 1
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            id: toolbar_chat_screen
+            title: ''
+            md_bg_color: 48/255, 48/255, 48/255, 1
+            pos_hint: {'top': True}
+            right_action_items : [['information-variant', lambda x : root.manager.chatscreen.id_information_dialog()]]
+            left_action_items : [['keyboard-backspace', lambda x : root.manager.change_screen('home')]]
+        ScrollView:
+            id: scroll_view
+            md_bg_color: 48/255, 48/255, 48/255, 1
+            do_scroll_x: False
+            bar_width: 3
+            scroll_wheel_distance: 100
+            effect_cls: "DampedScrollEffect"
+
+            MDList:
+                id: container_chat_content
+                md_bg_color: 48/255, 48/255, 48/255, 1
+                spacing: 0,15
+
+        MDTextFieldRound:
+            background_color: 48,48,48,1
+            normal_color: 48,48,48,1
+            color_active: 48,48,48,1
+            hint_text: "Type your message"
+            write_tab: False
+            multiline: False
+            on_text_validate: root.send_message()
+            id : input_chat_text

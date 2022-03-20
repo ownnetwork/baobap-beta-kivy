@@ -1,0 +1,4 @@
+kivy
+kivymd
+ownnetwork
+qrcode

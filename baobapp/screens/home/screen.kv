@@ -1,0 +1,143 @@
+#:import ZBarCam kivy_garden.zbarcam.ZBarCam
+#:import ZBarSymbol pyzbar.pyzbar.ZBarSymbol
+#import json
+#from kivymd.toast import toast
+
+<Content>:
+    adaptive_height: True
+
+    TwoLineIconListItem:
+        text: "(050)-123-45-67"
+        secondary_text: "Mobile"
+
+        IconLeftWidget:
+            icon: 'phone'
+
+<ContentGetInfoFromUrlDialog>:
+    orientation: "vertical"
+    size_hint_y: None
+    MDTextField:
+        hint_text: "URL Link"
+        text: root.input_text
+        multiline: False
+        on_text_validate: root.on_text_validate(self.text)
+
+<ContentJsonCodeDialog>:
+    orientation: "vertical"
+    size_hint_y: None
+    height: "120dp"
+    MDTextField:
+        hint_text: "Json"
+        text: root.input_text
+        multiline: False
+        on_text_validate: root.on_text_validate(self.text)
+
+<AccountItemSource@OneLineAvatarListItem>:
+    
+    text: root.text
+    ImageLeftWidget:
+        source: root.source
+
+<HomeScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        id: home_content
+        MDBottomNavigation:
+            panel_color: get_color_from_hex("#373737")
+            selected_color_background: get_color_from_hex("#97ecf8")
+            text_color_active: 0, 0, 0, 1
+
+            #################################################################################
+            ##### HOME
+            #################################################################################
+
+            MDBottomNavigationItem:
+                name: 'home'
+                icon: 'home'
+                text: "Home"
+                use_text: False
+                on_tab_press: root.manager.home_builder()
+                MDBoxLayout:
+                    md_bg_color: 48/255, 48/255, 48/255, 1
+                    orientation: 'vertical'
+                    MDToolbar:
+                        id: home_toolbar
+                        title: ''
+                        md_bg_color: 48/255, 48/255, 48/255, 1
+                        pos_hint: {'top': True}
+                        left_action_items : [['server-network', lambda x : root.show_public_host_dialog()], ['reload', lambda x : root.manager.chatscreen.read_recv_data(1)]]
+                        #right_action_items : [['qrcode-scan', lambda x : toast('Soon')]]
+                    ScrollView:
+                        MDList:
+                            id: message_conv_list
+
+            #################################################################################
+            ##### ACCOUNT MANAGEMENT
+            #################################################################################
+
+            MDBottomNavigationItem:
+                use_text: False
+                text: "profile"
+                name: 'profile'
+                icon: 'account'
+                on_tab_press: root.manager.homescreen.accounts_lists()
+                #on_tab_press: root.manager.homescreen.show_example_grid_bottom_sheet()
+
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    md_bg_color: 48/255, 48/255, 48/255, 1
+
+                    MDBoxLayout:
+                        adaptive_width: True
+                        adaptive_height: True
+                        spacing: 20
+                        orientation: 'horizontal'
+                        md_bg_color: 48/255, 48/255, 48/255, 1
+                        
+                        MDTextButton:
+                            text: "ADD USER-ID"
+                            custom_color: 0, 1, 0, 1
+                            on_release: root.manager.homescreen.automatic_adding_contact()
+                        
+                        MDTextButton:
+                            text: "ADD ACCOUNT"
+                            custom_color: 0, 1, 0, 1
+                            on_release: 
+                                print('test')
+                                root.manager.homescreen.dialog_adding_accounts()
+
+                    ScrollView:
+                        MDList:
+                            id: my_accounts
+
+                    #MDBoxLayout:
+                        #spacing: 300
+
+                #BoxLayout:
+                #    orientation: 'vertical'
+                    #ZBarCam:
+                    #    id: zbarcam
+                        # optional, by default checks all types
+                    #    code_types: ZBarSymbol.QRCODE, ZBarSymbol.EAN13
+                    #Label:
+                    #    size_hint: None, None
+                        #size: self.texture_size[0], 50
+                    #    text: ', '.join([str(symbol.data) for symbol in zbarcam.symbols])
+
+            #################################################################################
+            ##### ACCOUNT MANAGEMENT
+            #################################################################################
+
+            MDBottomNavigationItem:
+                use_text: False
+                name: 'settings'
+                text: "Settings"
+                icon: 'cog'
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    md_bg_color: 48/255, 48/255, 48/255, 1
+                    MDBoxLayout:
+                        orientation: 'horizontal'
+                        MDLabel:
+                            markup: True
+                            text: 'BaobAPP Beta 0.1, this version as be developped by iammehdib'
