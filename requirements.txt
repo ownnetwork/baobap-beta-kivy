@@ -2,3 +2,5 @@ kivy
 kivymd
 ownnetwork
 qrcode
+plyer
+kivy_garden.zbarcam
